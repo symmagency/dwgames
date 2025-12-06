@@ -53,3 +53,47 @@ $(document).ready(function() {
   insertPriceComparisonAfterCollection6();
 });
 
+// Variáveis configuráveis
+const ctRumbleImageDesktopUrl = 'https://path.to.image/crash-team-rumble-desktop.jpg'; // Substitua pelo URL da imagem para desktop
+const ctRumbleImageMobileUrl = 'https://path.to.image/crash-team-rumble-mobile.jpg'; // Substitua pelo URL da imagem para mobile
+const ctRumblePrice = 'R$ 299,99';
+const ctRumbleLink = '/comprar/crash-team-rumble';
+
+// Gera o HTML do card com imagem para desktop e mobile
+function CrashTeamRumbleCard() {
+  return `
+    <a href="${ctRumbleLink}" class="ctrumble-card-link">
+      <div class="ctrumble-card">
+        <picture>
+          <source media="(max-width: 767px)" srcset="${ctRumbleImageMobileUrl}">
+          <source media="(min-width: 768px)" srcset="${ctRumbleImageDesktopUrl}">
+          <img src="${ctRumbleImageDesktopUrl}" alt="Crash Team Rumble">
+        </picture>
+        <div>
+          <div>
+            <div>
+              ${ctRumblePrice} <span>no pix</span>
+            </div>
+          </div>
+          <div>
+            <span>
+              Comprar agora <span>↗</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  `;
+}
+
+// Exemplo de inserção do card na página usando jQuery
+// Altere o seletor conforme o local desejado
+function insertCrashTeamRumbleCard() {
+  // Exemplo: insere no início do body
+  $('.home .video .yt-video').append(CrashTeamRumbleCard());
+}
+
+// Chama a função ao carregar o DOM
+$(document).ready(function() {
+  insertCrashTeamRumbleCard();
+});
