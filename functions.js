@@ -97,3 +97,40 @@ function insertCrashTeamRumbleCard() {
 $(document).ready(function() {
   insertCrashTeamRumbleCard();
 });
+
+
+// Função para gerar o HTML igual ao da imagem da central de ofertas DW
+function renderDWPromosHero() {
+  return `
+    <section class="dw-promos-hero">
+      <div>
+        <h1>
+          <span>PROMOS</span><br>
+          <span>DA DW</span>
+        </h1>
+        <p>
+          Bem-vindo à <span>central de ofertas da DW GAMES</span> — o lugar certo para gamers que querem jogos originais para PS4/PS5 com preço baixo, entrega digital rápida e segurança garantida.
+        </p>
+      </div>
+      <div>
+        <div>
+          <span>🎟️</span>
+          <span>
+            JOGOS COM ATÉ <span>50% DE DESCONTO</span>
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Confira os jogos e aproveite!</div>
+        <div>↓</div>
+      </div>
+    </section>
+  `;
+}
+
+// Exemplo: inserir após o início do body ou onde desejar:
+$(document).ready(function() {
+  // Altere o seletor abaixo conforme o local desejado de inserção
+  $('.promotion .holder-results').prepend(renderDWPromosHero());
+});
+
