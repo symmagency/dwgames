@@ -709,7 +709,7 @@ body.dark-mode .collection-12 .product-name {
 }
 
 .box-product:not(.-clear) {
-    border-radius: 20px 20px 4px 4px;
+    border-radius: 20px 20px 4px 4px!important;
 }
 
 .box-product .holder-image img {
@@ -1449,6 +1449,7 @@ section.dw-promos-hero {
     height: auto;
     margin: 0;
     width: 100%;
+    max-height: max-content;
 }
 
 .ctrumble-card {

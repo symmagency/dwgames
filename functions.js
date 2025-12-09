@@ -519,19 +519,33 @@ $(window).on('load', function () {
     tryInsertDWPromosHero();
   });
   
-  
-  $(document).ready(function(){
-      
-      $('.main-product-buy-button-holder').after(`
-  <div class="rating-total">
-      <a href="">
-          <span>+1000 avaliações</span>
-          <strong><span>Clique aqui</span> para ver os comentários de nossos clientes!</strong>
-      </a>
-  </div>
-  `);
-  });
-  
+
+// Tente até conseguir inserir o bloco após .main-product-buy-button-holder
+function tryInsertRatingTotal(retries = 12, delay = 250) {
+  var $holder = $('.main-product-buy-button-holder');
+  // Tentar apenas se ainda não inserido
+  if ($holder.length && $('.rating-total').length === 0) {
+    $holder.after(`
+      <div class="rating-total">
+          <a href="https://www.instagram.com/stories/highlights/18277528633168627/">
+              <span>+1000 avaliações</span>
+              <strong><span>Clique aqui</span> para ver os comentários de nossos clientes!</strong>
+          </a>
+      </div>
+    `);
+    return;
+  }
+  if (retries > 0) {
+    setTimeout(function() {
+      tryInsertRatingTotal(retries - 1, delay);
+    }, delay);
+  }
+}
+
+$(document).ready(function(){
+  tryInsertRatingTotal();
+});
+
   
   (function($){
     function tryInsertIconSearch(retries = 10, delay = 200) {
