@@ -615,9 +615,9 @@ $(document).ready(function(){
         // Verifica se já existe o p explicativo para evitar duplicar
         if ($btn.find('.variant-hint').length === 0) {
           if (/primaria/i.test(normalized)) {
-            $btn.append('<p class="variant-hint" style="opacity:0.6; font-size:12px; margin:0;">Jogue em nosso perfil</p>');
-          } else if (/secundaria/i.test(normalized)) {
             $btn.append('<p class="variant-hint" style="opacity:0.6; font-size:12px; margin:0;">Jogue em seu perfil</p>');
+          } else if (/secundaria/i.test(normalized)) {
+            $btn.append('<p class="variant-hint" style="opacity:0.6; font-size:12px; margin:0;">Jogue em nosso perfil</p>');
           }
         }
       });
