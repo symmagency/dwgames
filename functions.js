@@ -32,42 +32,49 @@ $(window).on('load', function () {
   
     // --- Criação da Seção de Categorias em Destaque ---
     function criarCategoriesHighlight() {
-      // Array com os dados dos jogos (imagens)
+      // Array com os dados dos jogos (imagens e links)
       var games = [
         {
           name: 'Call of Duty',
           image: 'https://symmagency.github.io/dwgames/assets/gamescat/cod.png',
-          alt: 'Call of Duty'
+          alt: 'Call of Duty',
+          link: 'https://dwgames.com.br/busca?q=call+of+duty'
         },
         {
           name: 'God of War',
           image: 'https://symmagency.github.io/dwgames/assets/gamescat/gow.png',
-          alt: 'God of War'
+          alt: 'God of War',
+          link: 'https://dwgames.com.br/busca?q=god+of+war'
         },
         {
           name: 'FC 25',
           image: 'https://symmagency.github.io/dwgames/assets/gamescat/fc.png',
-          alt: 'FC 25'
+          alt: 'FC 25',
+          link: 'https://dwgames.com.br/busca?q=fc+25'
         },
         {
           name: 'Forza',
           image: 'https://symmagency.github.io/dwgames/assets/gamescat/forza.png',
-          alt: 'Forza'
+          alt: 'Forza',
+          link: 'https://dwgames.com.br/busca?q=forza'
         },
         {
           name: 'Grand Theft Auto',
           image: 'https://symmagency.github.io/dwgames/assets/gamescat/gta.png',
-          alt: 'Grand Theft Auto'
+          alt: 'Grand Theft Auto',
+          link: 'https://dwgames.com.br/busca?q=grand+theft+auto'
         },
         {
           name: 'UFC',
           image: 'https://symmagency.github.io/dwgames/assets/gamescat/ufc.png',
-          alt: 'UFC'
+          alt: 'UFC',
+          link: 'https://dwgames.com.br/busca?q=ufc'
         },
         {
           name: 'Formula 1',
           image: 'https://symmagency.github.io/dwgames/assets/gamescat/fone.png',
-          alt: 'Formula 1'
+          alt: 'Formula 1',
+          link: 'https://dwgames.com.br/busca?q=f1'
         }
       ];
   
@@ -84,12 +91,17 @@ $(window).on('load', function () {
         // Cria os cards dos jogos
         $.each(games, function (index, game) {
           var $gameCard = $('<div>', { 'class': 'game-card' });
+          var $gameLink = $('<a>', { 
+            href: game.link, 
+            title: game.name 
+          });
           var $gameImage = $('<img>', {
             src: game.image,
             alt: game.alt
           });
   
-          $gameCard.append($gameImage);
+          $gameLink.append($gameImage);
+          $gameCard.append($gameLink);
           $categoriesSection.append($gameCard);
         });
   
