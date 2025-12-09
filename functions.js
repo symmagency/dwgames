@@ -435,8 +435,8 @@ $(window).on('load', function () {
   });
   
   // Variáveis configuráveis
-  const ctRumblePrice = 'R$ 299,99';
-  const ctRumbleLink = 'https://www.dwgames.com.br/busca?q=gta';
+  const ctRumblePrice = 'R$ 143,91';
+  const ctRumbleLink = 'https://www.dwgames.com.br/ghost-of-yotei-ps5-edicao-standard-midia-digital/p';
   
   // Gera o HTML do card com imagem para desktop e mobile
   function CrashTeamRumbleCard() {

@@ -235,7 +235,7 @@ body.dark-mode:not(.category) input:not([type='checkbox'], [type='radio']) {
     align-items: center;
     justify-content: flex-end;
     padding: 40px;
-    background: url(https://symmagency.github.io/dwgames/assets/banners/gtav-video.png) no-repeat center;
+    background: url(https://symmagency.github.io/dwgames/assets/banners/yotei-video.png) no-repeat center;
     background-size: cover;
     border-radius: 10px;
 }
