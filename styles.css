@@ -25,9 +25,19 @@ body.dark-mode.category {
 	max-width: 1460px;
 }
 
-.box-product .holder-image img {
+.box-product .holder-image img, .category {
 	max-height: fit-content;
     border-radius: 30px;
+}
+
+.promotion .box-product .holder-image img,
+.category .box-product .holder-image img {
+    border-radius: 20px;
+}
+
+.promotion .box-product:not(.-clear), 
+.category .box-product:not(.-clear) {
+    border-radius: 20px 20px 4px 4px;
 }
 
 .image-ratio {
