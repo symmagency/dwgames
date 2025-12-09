@@ -461,6 +461,7 @@ body.dark-mode .collection-12 .product-name {
 .logo,
 .logo img {
     max-width: 100px;
+    flex: 1;
 }
 
 /* Somente desktop */
