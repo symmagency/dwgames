@@ -458,6 +458,11 @@ body.dark-mode .collection-12 .product-name {
 	margin-bottom: 16px;
 }
 
+.logo,
+.logo img {
+    max-width: 100px;
+}
+
 /* Somente desktop */
 @media screen and (min-width: 701px) {
 	.main-banner .holder-main-banner .banner:not(.is-active) {
@@ -467,11 +472,6 @@ body.dark-mode .collection-12 .product-name {
 
 	.search-container {
 		max-width: 700px;
-	}
-
-	.logo,
-	.logo img {
-		max-width: 100px;
 	}
 
 	section.banner-2.banner_2-3 {
