@@ -1065,7 +1065,7 @@ body.dark-mode .rkt-header-shopping-page-redirect:after {
 	border-radius: 8px;
 }
 
-.main-product-content
+/* .main-product-content
 	.holder-variant-button
 	.variant-button:first-child::after {
 	content: 'Jogue em seu perfil';
@@ -1079,7 +1079,7 @@ body.dark-mode .rkt-header-shopping-page-redirect:after {
 	display: block;
 	opacity: 0.6;
 	font-size: 12px;
-}
+} */
 
 .main-product-content .holder-variant-button .variant-button.selected::before {
 	content: '';
