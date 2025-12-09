@@ -579,4 +579,58 @@ $(document).ready(function(){
       $(window).on('resize', function(){ if ($(window).width() < 768) tryInsertIconSearch(); });
     });
   })(jQuery);
-  
+
+  // Script para identificar opção Primária/Secundária e adicionar textos explicativos - com tentativas
+
+  function tryInsertVariantHints(retries = 15, delay = 250) {
+    var $holders = $('.holder-variant-button');
+    if ($holders.length === 0) {
+      if (retries > 0) {
+        setTimeout(function () {
+          tryInsertVariantHints(retries - 1, delay);
+        }, delay);
+      }
+      return;
+    }
+
+    $holders.each(function () {
+      var $holder = $(this);
+      var $buttons = $holder.children('.variant-button');
+      if ($buttons.length === 0) {
+        // fallback: buscar descendentes
+        $buttons = $holder.find('.variant-button');
+      }
+      $buttons.each(function () {
+        var $btn = $(this);
+
+        // O texto pode estar diretamente, ou dentro de um .text, ou até atributo title, ou texto puro do botão
+        var btnText =
+          $.trim($btn.find('.text').text()) ||
+          $.trim($btn.attr('title')) ||
+          $.trim($btn.text());
+
+        // Normaliza para ascii para diminuir problemas com acento visual/exibir (caso class .text não existe)
+        var normalized = btnText.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+        // Verifica se já existe o p explicativo para evitar duplicar
+        if ($btn.find('.variant-hint').length === 0) {
+          if (/primaria/i.test(normalized)) {
+            $btn.append('<p class="variant-hint" style="opacity:0.6; font-size:12px; margin:0;">Jogue em nosso perfil</p>');
+          } else if (/secundaria/i.test(normalized)) {
+            $btn.append('<p class="variant-hint" style="opacity:0.6; font-size:12px; margin:0;">Jogue em seu perfil</p>');
+          }
+        }
+      });
+    });
+  }
+
+  // Tenta ao carregar e também após mudanças no DOM
+  $(function () {
+    tryInsertVariantHints();
+    // Re-tentar por eventuais mudanças AJAX ou quick add/reload
+    var mo = new MutationObserver(function() {
+      tryInsertVariantHints();
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+  });
+
