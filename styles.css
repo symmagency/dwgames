@@ -708,6 +708,10 @@ body.dark-mode .collection-12 .product-name {
     display: none;
 }
 
+.box-product:not(.-clear) {
+    border-radius: 20px 20px 4px 4px;
+}
+
 .box-product .holder-image img {
 	max-height: fit-content;
     border-radius: 20px;
