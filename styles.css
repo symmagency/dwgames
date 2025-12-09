@@ -590,51 +590,6 @@ body.dark-mode .collection-12 .product-name {
 		flex: 1;
 	}
 
-	/* Ajustes na barra de newsletter */
-
-	#form-newsletter .btn {
-        background: #69FA00;
-        border: 0;
-        height: 44px;
-        color: #000;
-	}
-
-	.holder-newsletter {
-		display: flex;
-		align-items: center;
-		gap: 40px;
-		justify-content: space-between;
-		padding-left: 220px;
-		position: relative;
-	}
-
-	.holder-newsletter:before {
-		content: '';
-		width: 200px;
-		height: 200px;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		background: url(https://i.imgur.com/0euYexZ.png) center no-repeat;
-	}
-
-	.holder-newsletter .-title {
-		color: #fff;
-		text-align: left;
-		font-size: 22px;
-	}
-
-	.holder-newsletter .-title:after {
-		content: 'Receba novidades exclusivas em seu e-mail';
-		display: block;
-		font-size: 16px;
-		font-weight: normal;
-	}
-
-	.holder-newsletter-form {
-		margin: 0;
-	}
-
 	.main-product-info {
 		padding: 40px;
 		background: #1c1d20;
@@ -1507,4 +1462,53 @@ section.dw-promos-hero {
 
 .main-product-content .holder-variant-button {
     flex-direction: row-reverse;
+}
+
+.collection-12 .products-list .block .holder-image img {
+    border-radius: 5px;
+}
+
+/* Ajustes na barra de newsletter */
+
+#form-newsletter .btn {
+    background: #69FA00;
+    border: 0;
+    height: 44px;
+    color: #000;
+}
+
+.holder-newsletter {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+    padding-left: 220px;
+    position: relative;
+}
+
+.holder-newsletter:before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(https://i.imgur.com/0euYexZ.png) center no-repeat;
+}
+
+.holder-newsletter .-title {
+    color: #fff;
+    text-align: left;
+    font-size: 22px;
+}
+
+.holder-newsletter .-title:after {
+    content: 'Receba novidades exclusivas em seu e-mail';
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.holder-newsletter-form {
+    margin: 0;
 }
