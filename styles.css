@@ -1504,3 +1504,7 @@ section.dw-promos-hero {
     font-weight: 600;
     color: #69FA00;
 }
+
+.main-product-content .holder-variant-button {
+    flex-direction: row-reverse;
+}
