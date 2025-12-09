@@ -502,11 +502,21 @@ $(window).on('load', function () {
       </section>
     `;
   }
-  
-  // Exemplo: inserir após o início do body ou onde desejar:
+
+  // Tente até conseguir inserir o conteúdo no local correto
+  function tryInsertDWPromosHero(retries = 15, delay = 300) {
+    var $holderResults = $('.promotion .holder-results');
+    if ($holderResults.length && $holderResults.find('.dw-promos-hero').length === 0) {
+      $holderResults.prepend(renderDWPromosHero());
+    } else if (retries > 0) {
+      setTimeout(function() {
+        tryInsertDWPromosHero(retries - 1, delay);
+      }, delay);
+    }
+  }
+
   $(document).ready(function() {
-    // Altere o seletor abaixo conforme o local desejado de inserção
-    $('.promotion .holder-results').prepend(renderDWPromosHero());
+    tryInsertDWPromosHero();
   });
   
   
