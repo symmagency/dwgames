@@ -372,8 +372,9 @@ $(window).on('load', function () {
   });
   
   // Adiciona a seção de comparação de preços após .home .collection-6
-  
-  // Definição das variáveis para permitir personalização fácil
+  // Tente até conseguir
+
+  // Definição das variáveis e dados
   const leftImageUrl = 'https://symmagency.github.io/dwgames/assets/banners/bfsix.png';
   const rightImageUrl = 'https://symmagency.github.io/dwgames/assets/banners/wwm.png';
   const prices = [
@@ -386,7 +387,7 @@ $(window).on('load', function () {
     { value: 'R$ 200', link: '/busca?q=ps&max=200' },
     { value: 'R$ 300', link: '/busca?q=ps&max=300' }
   ];
-  
+
   function PriceComparisonSection() {
     return `
       <div class="comparison-container">
@@ -397,14 +398,12 @@ $(window).on('load', function () {
           <h3>Compare jogos por faixa de preço</h3>
           <span>Escolha o valor e veja os jogos nesta faixa</span>
           <ul>
-            ${prices
-              .map(
-                price =>
-                  `<li>
-                    <a href="${price.link}">${price.value}</a>
-                  </li>`
-              )
-              .join('')}
+            ${prices.map(
+              price =>
+                `<li>
+                  <a href="${price.link}">${price.value}</a>
+                </li>`
+            ).join('')}
           </ul>
         </div>
         <div class="img-right">
@@ -413,24 +412,31 @@ $(window).on('load', function () {
       </div>
     `;
   }
-  
-  // Insere a seção de comparação de preços após .home .collection-6 usando jQuery
-  function insertPriceComparisonAfterCollection6() {
-    var $collection6 = $('.home .collection-6');
-    if ($collection6.length) {
-      var $comparisonSection = $(PriceComparisonSection());
+
+  // Função que tenta inserir até conseguir
+  function tryInsertPriceComparison() {
+    const $collection6 = $('.home .collection-6');
+    if ($collection6.length > 0 && $('.comparison-container').length === 0) {
+      const $comparisonSection = $(PriceComparisonSection());
       $collection6.after($comparisonSection);
+      // Confirma se inseriu, senão tenta novamente
+      if ($('.comparison-container').length === 0) {
+        setTimeout(tryInsertPriceComparison, 300);
+      }
+    } else if ($('.comparison-container').length === 0) {
+      // Se não achou o alvo, tenta novamente
+      setTimeout(tryInsertPriceComparison, 300);
     }
   }
-  
-  // Executa assim que o DOM estiver pronto usando jQuery
+
+  // Tente até conseguir inserir quando o DOM estiver carregado
   $(document).ready(function() {
-    insertPriceComparisonAfterCollection6();
+    tryInsertPriceComparison();
   });
   
   // Variáveis configuráveis
   const ctRumblePrice = 'R$ 299,99';
-  const ctRumbleLink = '/comprar/crash-team-rumble';
+  const ctRumbleLink = 'https://www.dwgames.com.br/busca?q=gta';
   
   // Gera o HTML do card com imagem para desktop e mobile
   function CrashTeamRumbleCard() {
