@@ -708,6 +708,16 @@ body.dark-mode .collection-12 .product-name {
     display: none;
 }
 
+.box-product .holder-image img {
+	max-height: fit-content;
+    border-radius: 20px;
+}
+
+.promotion .box-product .holder-image img,
+.category .box-product .holder-image img {
+    border-radius: 20px;
+}
+
 .header-content .holder-search.open {
     display: block;
 }
