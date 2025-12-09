@@ -1512,3 +1512,24 @@ section.dw-promos-hero {
 .holder-newsletter-form {
     margin: 0;
 }
+
+@media screen and (max-width: 700px) {
+    .holder-newsletter {
+        flex-direction: column;
+        padding: 60px 20px 20px;
+    }
+    
+    .holder-newsletter .-title {
+        padding-right: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .holder-newsletter:before {
+        right: -10px;
+        left: auto;
+        top: auto;
+        bottom: 133px;
+    }
+}
