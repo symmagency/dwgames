@@ -163,28 +163,20 @@ $(window).on('load', function () {
   // Array com as perguntas e respostas do FAQ
   var faqData = [
     {
-      question: "Quais formas de pagamento vocês aceitam?",
-      answer: "Aceitamos cartão de crédito, débito, Pix e boleto bancário."
-    },
-    {
-      question: "Como recebo meu jogo após a compra?",
-      answer: "Você receberá o código de ativação por e-mail imediatamente após a confirmação do pagamento."
-    },
-    {
-      question: "Os jogos são originais?",
-      answer: "Sim. Todos os jogos vendidos são originais, com garantia de ativação nas plataformas oficiais (Steam, Xbox, PlayStation, etc)."
-    },
-    {
-      question: "Em quanto tempo meu pedido é liberado?",
-      answer: "Pagamentos via cartão e Pix são liberados em poucos minutos. Boleto pode levar até 2 dias úteis."
-    },
-    {
-      question: "Não recebi meu código. O que faço?",
-      answer: "Verifique sua caixa de spam. Caso não encontre, entre em contato pelo nosso suporte com o número do pedido."
+      question: "Não recebi meu jogo. O que faço?",
+      answer: "Verifique todo seu email inclusive caixa de spam. Caso não encontre, entre em contato pelo nosso suporte com o número do pedido."
     },
     {
       question: "Posso pedir reembolso?",
-      answer: "Sim, desde que o código não tenha sido ativado. Após a ativação, não é possível realizar reembolso."
+      answer: "Sim, desde que o jogo não tenha sido enviado. como se trata de produto digital (licença única), não é possível reembolso após o envio da conta com o jogo. A licença funciona como um gift card: uma vez enviada, já pode ser usada e não pode ser reutilizada."
+    },
+    {
+      question: "Os jogos são originais?",
+      answer: "Sim. Todos os jogos vendidos são originais, são comprados direto da playstation store, com suporte vitalício da dw games 💚"
+    },
+    {
+      question: "Como recebo meu jogo após a compra?",
+      answer: "Você receberá o seu jogo por e-mail logo após a confirmação do pagamento, lembre sempre de verificar o seu email, inclusive caixa de spam."
     }
   ];
   
