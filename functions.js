@@ -163,20 +163,28 @@ $(window).on('load', function () {
   // Array com as perguntas e respostas do FAQ
   var faqData = [
     {
-      question: "Não recebi meu jogo. O que faço?",
-      answer: "Verifique todo seu email inclusive caixa de spam. Caso não encontre, entre em contato pelo nosso suporte com o número do pedido."
+      question: "Quais formas de pagamento vocês aceitam?",
+      answer: "Aceitamos cartão de crédito, débito, Pix e boleto bancário."
     },
     {
-      question: "Posso pedir reembolso?",
-      answer: "Sim, desde que o jogo não tenha sido enviado. como se trata de produto digital (licença única), não é possível reembolso após o envio da conta com o jogo. A licença funciona como um gift card: uma vez enviada, já pode ser usada e não pode ser reutilizada."
+      question: "Como recebo meu jogo após a compra?",
+      answer: "Você receberá o seu jogo por e-mail logo após a confirmação do pagamento, lembre sempre de verificar o seu email, inclusive caixa de spam."
     },
     {
       question: "Os jogos são originais?",
       answer: "Sim. Todos os jogos vendidos são originais, são comprados direto da playstation store, com suporte vitalício da dw games 💚"
     },
     {
-      question: "Como recebo meu jogo após a compra?",
-      answer: "Você receberá o seu jogo por e-mail logo após a confirmação do pagamento, lembre sempre de verificar o seu email, inclusive caixa de spam."
+      question: "Em quanto tempo meu pedido é liberado?",
+      answer: "Não recebi meu código. O que faço?"
+    },
+    {
+      question: "Não recebi meu jogo. O que faço?",
+      answer: "Verifique todo seu email inclusive caixa de spam. Caso não encontre, entre em contato pelo nosso suporte com o número do pedido."
+    },
+    {
+      question: "Posso pedir reembolso?",
+      answer: "Sim, desde que o jogo não tenha sido enviado. como se trata de produto digital (licença única), não é possível reembolso após o envio da conta com o jogo. A licença funciona como um gift card: uma vez enviada, já pode ser usada e não pode ser reutilizada."
     }
   ];
   

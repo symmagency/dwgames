@@ -2,7 +2,7 @@
 
 /* Horário de atendimento */
 .footer .-contact .contact-email:after {
-	content: 'Atendimento de segunda a sexta das 8 horas às 23 horas.';
+	content: 'Atendimento de segunda a sexta das 10 horas às 22 horas. Sábados das 12 horas às 20 horas.';
 	display: block;
 	text-wrap: initial;
 	margin-top: 8px;
