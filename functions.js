@@ -175,8 +175,8 @@ $(window).on('load', function () {
       answer: "Sim. Todos os jogos vendidos são originais, são comprados direto da playstation store, com suporte vitalício da dw games 💚"
     },
     {
-      question: "Em quanto tempo meu pedido é liberado?",
-      answer: "Não recebi meu código. O que faço?"
+      question: "Posso comprar um jogo de PS4 e usar no PS5?",
+      answer: "Não. Cada jogo comprado em nosso site é exclusivo para o console informado no momento da compra. Caso o jogo seja utilizado em outro console, ele não funcionará. Além disso, não realizamos troca de jogos, pois nossa logística não permite esse tipo de alteração :)."
     },
     {
       question: "Não recebi meu jogo. O que faço?",
