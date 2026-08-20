@@ -1533,3 +1533,65 @@ section.dw-promos-hero {
         bottom: 133px;
     }
 }
+
+/* Vitrine GTA VI */
+
+.grid_collection-7 {
+	background: url(https://cdn.awsli.com.br/2727/2727537/arquivos/gtavi.png)
+		center no-repeat;
+	background-size: cover;
+}
+
+.grid_collection-7 .section-grid-collection--container {
+	flex-direction: row;
+	align-items: center;
+	min-height: 600px;
+}
+
+.grid_collection-7 .section-grid-collection--container > div {
+	flex: 1;
+}
+
+.grid_collection-7
+	.section-grid-collection--products
+	.grid-collection-box
+	> .holder-buy-button {
+	display: none;
+}
+
+.grid_collection-7 .section-grid-collection--text .title-text {
+	font-size: 56px;
+}
+
+.grid_collection-7 .section-grid-collection--text .title-text:before {
+	content: '';
+	background: url(https://cdn.awsli.com.br/2727/2727537/arquivos/gtavilogo.png)
+		center no-repeat;
+	width: 149px;
+	height: 119px;
+	display: flex;
+}
+
+.grid_collection-7 .box-product {
+	border-radius: 5px!important;
+	backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 768px) {
+	
+	.grid_collection-7 {
+		margin-top: 60px!important;	
+	}
+	
+	.grid_collection-7 .section-grid-collection--text .title-text:before {
+		margin: 0 auto;
+	}
+
+	.grid_collection-7 .section-grid-collection--container {
+		flex-direction: column;
+	}
+
+	.grid_collection-7 .section-grid-collection--banner {
+		display: none;
+	}
+}
