@@ -438,6 +438,10 @@ body.dark-mode .collection-14 .product-name {
 	margin-left: 4px;
 }
 
+.collection-14 .products-list.-grid {
+    grid-template-columns: repeat(var(--products-grid-columns, 2), 1fr);
+}
+
 /* Carrossel de categorias */
 
 /*.c-highlight-content--slide img {
