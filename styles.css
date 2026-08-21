@@ -46,10 +46,10 @@ body.dark-mode.category {
 
 .header-content .search-btn {
 	left: auto;
-	right: 10px;
-	top: 0;
-	padding: 10px;
-	border-radius: 0;
+    right: 9px;
+    top: 4px;
+    padding: 10px;
+    border-radius: 0;
 }
 
 .header-content .search-bar {
@@ -115,7 +115,7 @@ body.dark-mode.category {
 	background: rgba(255, 255, 255, 0.05);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-sizing: border-box;
-	height: 44px;
+	height: 52px;
 }
 
 .header-content .mini-cart-holder {
@@ -123,7 +123,7 @@ body.dark-mode.category {
 	justify-content: center;
 	display: flex;
 	padding: 12px 24px;
-	height: 44px;
+	height: 52px;
 	width: auto;
 	border-radius: 6px;
 	border: 1px solid rgba(255, 255, 255, 0.1);
@@ -132,16 +132,19 @@ body.dark-mode.category {
 
 .header-content {
 	border-bottom: 1px solid #303138;
-	padding-bottom: 4px;
+	padding-bottom: 0px;
 }
 
 .header-content .categories .categories-menu li .promotions-nav-text {
-	height: 44px;
-	display: flex;
-	align-items: center;
-	padding: 10px 20px;
-	border: 1px solid #69fa00;
-	border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    background: linear-gradient(90deg, #69FA00 0%, #3E9400 100%);
+    border-radius: 0;
+    height: 59px;
+    color: #000 !important;
+    font-weight: bold;
 }
 
 .section-header:has(.h-left-container) .header-content-right {
@@ -1661,4 +1664,55 @@ section.dw-promos-hero {
 	.grid_collection-11 .section-grid-collection--banner {
 		display: none;
 	}
+}
+
+/* MENU */
+
+.h-categories-container > div > a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-categories-container:first-child > div > a:before,
+.h-categories-container:nth-child(2) > div > a:before {
+    content: "";
+    width: 24px;
+    height: 21px;
+    display: block;
+    background: url(https://cdn.awsli.com.br/2727/2727537/arquivos/psn.svg) center no-repeat;
+}
+
+.h-categories-container:nth-child(3) > div > a:before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    display: block;
+    background: url(https://cdn.awsli.com.br/2727/2727537/arquivos/ea.svg) center no-repeat;
+}
+
+.h-categories-container:nth-child(4) > div > a:before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    display: block;
+    background: url(https://cdn.awsli.com.br/2727/2727537/arquivos/percent_1.svg) center no-repeat;
+    background-size: 80%;
+}
+
+.h-categories-container:nth-child(6) > div > a:before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    display: block;
+    background: url(https://cdn.awsli.com.br/2727/2727537/arquivos/ea.svg) center no-repeat;
+}
+
+.header-content .categories .categories-menu li .promotions-nav-text:before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: url(https://cdn.awsli.com.br/2727/2727537/arquivos/promo.png) center no-repeat;
 }
