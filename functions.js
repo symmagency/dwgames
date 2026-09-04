@@ -634,3 +634,94 @@ $(document).ready(function(){
     mo.observe(document.body, { childList: true, subtree: true });
   });
 
+
+  $(function () {
+    const $collection = $('.collection-10');
+
+    if (!$collection.length || $('.how-works').length) {
+        return;
+    }
+
+    $collection.before(`
+        <div class="how-works">
+
+            <div class="h-video">
+
+                <div class="h-title">
+                    <p>VEJA COMO FUNCIONA</p>
+
+                    <h3>
+                        Seu próximo jogo está a poucos cliques.
+                        <span>É rápido, fácil e seguro!</span>
+                    </h3>
+                </div>
+
+                <div class="h-video-frame">
+                    <iframe
+                        src="https://www.youtube.com/embed/z9hRK_YRa8E"
+                        title="Como comprar na DW Games"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+            <div class="h-steps">
+
+                <div class="h-title">
+                    <p>POR QUE COMPRAR NA</p>
+                    <h3>DW Games?</h3>
+                </div>
+
+                <ul>
+
+                    <li>
+                        <strong>1</strong>
+
+                        <div>
+                            <span>Escolha o seu jogo</span>
+                            <p>Encontre seu próximo título e adicione-o ao carrinho.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <strong>2</strong>
+
+                        <div>
+                            <span>Faça o pagamento</span>
+                            <p>Finalize sua compra em um ambiente seguro e protegido.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <strong>3</strong>
+
+                        <div>
+                            <span>Receba os dados de acesso</span>
+                            <p>Envio imediato após a compra.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <strong>4</strong>
+
+                        <div>
+                            <span>Ative e comece a jogar</span>
+
+                            <p>
+                                Siga as instruções, acesse seu jogo e
+                                <em>divirta-se!</em>
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    `);
+});
