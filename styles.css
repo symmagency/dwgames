@@ -1958,3 +1958,19 @@ section.dw-promos-hero {
         font-size: 17px;
     }
 }
+
+@media screen and (max-width: 768px) {
+	.collection-12 .splide--draggable>.splide__track>.splide__list {
+		display: flex;
+		flex-direction: column;
+		width: 100%!important;
+	}
+	
+	.collection-12 .splide--draggable>.splide__track>.splide__list > .splide__slide {
+		width: 100%!important;
+	}
+	
+	.collection-12 .box-product:not(.-clear) {
+		border-radius: 10px!important;
+	}
+}
