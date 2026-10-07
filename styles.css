@@ -1973,4 +1973,8 @@ section.dw-promos-hero {
 	.collection-12 .box-product:not(.-clear) {
 		border-radius: 10px!important;
 	}
+
+	.collection-14 .products-list.-grid {
+		grid-template-columns: 1fr;
+	}
 }
