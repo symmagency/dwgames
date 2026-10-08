@@ -548,6 +548,7 @@ body.dark-mode .collection-14 .product-name {
 	.footer .holder-footer .section-1,
 	.footer .holder-footer .section-3 {
 		max-width: 1460px;
+		justify-content: space-between;
 	}
 
 	.section-header:has(.h-left-container) .holder-search {

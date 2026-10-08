@@ -19,7 +19,7 @@ $(window).on('load', function () {
           'class': 'holder-symm flex',
           html: '' +
             '<span>Desenvolvimento</span> ' +
-            '<a href="https://symmagency.webflow.io/" target="_blank" rel="noreferrer nofollow" class="yampi">' +
+            '<a href="https://symm.agency/" target="_blank" rel="noreferrer nofollow" class="yampi">' +
             '  <img src="https://cdn.awsli.com.br/2775/2775575/arquivos/symm.svg" alt="Symm - Agência de Design" width="110" height="24" class="h-va-middle h-inline-block h-ml10 loaded">' +
             '</a>'
         });
